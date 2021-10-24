@@ -51,7 +51,7 @@
                         label = "QWERTY";
                         bindings = <
    &gresc   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
-   &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &kp QUOT &kp ENTER
+   &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &kp QUOT &qent
    &kp LSHFT &kp LCTL &ht LG(Z) Z  &ht LG(X) X  &ht LG(C) C &ht LG(V) V   &kp B &kp N &kp M &kp CMMA &kp DOT &mt RSHIFT FSLH
               &kp LGUI &mo NUMROW &kp LGUI      &kp SPC &mo NUMROW &kp LALT
                         >;
