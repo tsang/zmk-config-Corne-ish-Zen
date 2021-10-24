@@ -17,6 +17,18 @@
 #define CONFIG 5
 
 / {
+
+    behaviors {
+        ht: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP";
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -25,7 +37,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
    &kp TAB  &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &kp QUOT &kp ENTER
-   &kp LSHFT &kp LCTL &kp Z &kp X &kp C &kp V   &kp B &kp N &kp M &kp CMMA &kp DOT &kp FSLH
+   &kp LSHFT &kp LCTL &hm LG(Z) Z  &hm LG(X) X  &hm LG(C) C &hm LG(V) V   &kp B &kp N &kp M &kp CMMA &kp DOT &kp FSLH
               &kp LGUI &mo NUMROW &kp LGUI      &kp SPC &mo NUMROW &kp LALT
                         >;
                 };
@@ -44,7 +56,7 @@
                         label = "NUMPAD";
                         bindings = < 
    &kp TAB     &none &none &none &none &none    &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
-   &kp KP_NLCK &none &none &none &none &none    &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
+   &kp KP_NLCK &none &kp LSHFT &none &none &none    &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
    &tog NUMPAD &none &none &none &none &none    &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &none
               &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &kp KP_N0 &kp KP_DOT
                         >;
@@ -54,9 +66,9 @@
                         label = "NUMROW";
                         bindings = <
    &kp ESC   &kp N1 &kp N2 &kp N3    &kp N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp DEL
-   &kp GRAVE &none  &none  &kp PSCRN &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
-   &none     &none  &none  &kp BSLH  &kp LBKT  &kp RBKT     &none    &none    &none  &none     &none    &none 
-                          &mo CONFIG &mo CONFIG &mo NUMROW    &kp SPC &mo ADJUST &kp F13
+   &kp GRAVE &none  &kp LSHFT  &kp PSCRN &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
+   &kp LSHFT &kp LCTL &none  &kp BSLH  &kp LBKT  &kp RBKT     &none    &none    &none  &none     &none    &none 
+                          &mo CONFIG &kp LCTL &mo NUMROW    &kp SPC &mo ADJUST &kp F13
                         >;
                 };
 
