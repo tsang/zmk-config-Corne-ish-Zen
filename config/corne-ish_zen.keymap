@@ -3,6 +3,11 @@
 * Copyright (c) 2021 lowprokb.ca
 * SPDX-License-Identifier: MIT
 *
+*   [KJH] = COMBO(kjh_combo, LALT(KC_LEFT)),
+*   [KLK] = COMBO(klk_combo, LALT(KC_RIGHT)),
+*   [KCJKL] = COMBO(kcjkl_combo, LCTL(KC_E)),
+*   [KCHJK] = COMBO(kchjk_combo, LCTL(KC_A)),
+*
 */
 
 #include <behaviors.dtsi>
@@ -17,7 +22,19 @@
 #define CONFIG 5
 
 / {
-
+    combos {
+        compatible = "zmk,combos";
+        combo_hj {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp LA(LEFT)>;
+        };
+        combo_kl {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LA(RIGHT)>;
+        };
+    };
     behaviors {
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
