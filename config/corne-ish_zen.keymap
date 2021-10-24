@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_ENTER";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp QUOTE>;
+            bindings = <&kp ENTER>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         shtqcolon: quote_colon {
