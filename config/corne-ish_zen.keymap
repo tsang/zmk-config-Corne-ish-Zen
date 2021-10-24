@@ -33,6 +33,13 @@
             bindings = <&kp ENTER>, <&kp QUOTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        shtqcolon: quote_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp QUOTE>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         ht: holdtap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTAP";
@@ -51,7 +58,7 @@
                         label = "QWERTY";
                         bindings = <
    &gresc   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
-   &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &kp QUOT &qent
+   &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &shtqcolon  &qent
    &kp LSHFT &kp LCTL &ht LG(Z) Z  &ht LG(X) X  &ht LG(C) C &ht LG(V) V   &kp B &kp N &kp M &kp CMMA &kp DOT &mt RSHIFT FSLH
               &kp LGUI &mo NUMROW &kp LGUI      &kp SPC &mo NUMROW &kp LALT
                         >;
