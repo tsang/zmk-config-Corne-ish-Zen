@@ -62,7 +62,7 @@
         combo_bsent {
             timeout-ms = <50>;
             key-positions = <11 23>;
-            bindings = <&kp FSLH>;
+            bindings = <&kp BSLH>;
         };
     };
     behaviors {
