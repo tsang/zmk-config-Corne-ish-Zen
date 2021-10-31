@@ -134,7 +134,7 @@
    &gresc   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
    &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &htsemi SEMI SEMI &qent
    &kp LSHFT &kp LCTL &ht LG(Z) Z  &ht LG(X) X  &ht LG(C) C &ht LG(V) V   &kp B &kp N &kp M &kp CMMA &kp DOT &mt RSHIFT FSLH
-              &kp LGUI &mo NUMROW &mt_ LGUI SPC     &mt_ LGUI SPC &mo NUMROW &kp LALT
+              &kp LGUI &mo NUMROW &mt_ LGUI SPC     &mt LGUI SPC &mo NUMROW &kp LALT
                         >;
                 };
 
