@@ -64,6 +64,11 @@
             key-positions = <11 23>;
             bindings = <&kp BSLH>;
         };
+        combo_df {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LG(F)>;
+        };
     };
     behaviors {
         mt_: custom_mod_tap {
