@@ -83,7 +83,7 @@
         };
         mt_mp_: custom_mod_tap_mp {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP";
+            label = "MOD_TAP_MP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
@@ -92,7 +92,7 @@
         };
         mtgui_: custom_mod_tap_gui {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_HOLD";
+            label = "MOD_TAP_HOLD_GUI";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <100>;
@@ -110,7 +110,7 @@
         };
         lt_mp_: custom_layer_tap_mp {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP";
+            label = "LAYER_TAP_MP";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <500>;
