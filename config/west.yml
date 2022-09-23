@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: caksoylar/zen+969+1098
+      revision: caksoylar/zen+969+1098+mouse
       import: app/west.yml
   self:
     path: config
