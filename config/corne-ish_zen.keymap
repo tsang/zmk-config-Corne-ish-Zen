@@ -81,7 +81,7 @@
             quick_tap_ms = <500>;
             bindings = <&kp>, <&kp>;
         };
-        mt_mp_: custom_mod_tap {
+        mt_mp_: custom_mod_tap_mp {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP";
             #binding-cells = <2>;
@@ -90,7 +90,7 @@
             quick_tap_ms = <500>;
             bindings = <&kp>, <&mkp>;
         };
-        mtgui_: custom_mod_tap {
+        mtgui_: custom_mod_tap_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_HOLD";
             #binding-cells = <2>;
@@ -108,7 +108,7 @@
             quick_tap_ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-        lt_mp_: custom_layer_tap {
+        lt_mp_: custom_layer_tap_mp {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
             #binding-cells = <2>;
