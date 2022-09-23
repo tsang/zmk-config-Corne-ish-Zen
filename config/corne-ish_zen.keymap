@@ -81,6 +81,15 @@
             quick_tap_ms = <500>;
             bindings = <&kp>, <&kp>;
         };
+        mt_mp_: custom_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick_tap_ms = <500>;
+            bindings = <&kp>, <&mkp>;
+        };
         mtgui_: custom_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_HOLD";
@@ -98,6 +107,15 @@
             tapping-term-ms = <500>;
             quick_tap_ms = <200>;
             bindings = <&mo>, <&kp>;
+        };
+        lt_mp_: custom_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <500>;
+            quick_tap_ms = <200>;
+            bindings = <&mo>, <&mkp>;
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
@@ -149,7 +167,7 @@
    &gresc   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P    &kp BKSP
    &kp TAB  &ht LG(A) A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &htsemi SEMI SEMI &qent
    &kp LSHFT &kp LCTL &ht LG(Z) Z  &ht LG(X) X  &ht LG(C) C &ht LG(V) V   &kp B &kp N &kp M &kp CMMA &kp DOT &mt RSHIFT FSLH
-              &mt_ LALT RCLK &lt_ NUMROW LCLK &mtgui_ LGUI SPC     &lt_ SYMBOL SPC &mo NUMROW &kp LALT
+              &mt_mp_ LALT RCLK &lt_mp_ NUMROW LCLK &mtgui_ LGUI SPC     &lt_ SYMBOL SPC &mo NUMROW &kp LALT
                         >;  
                 };
 
