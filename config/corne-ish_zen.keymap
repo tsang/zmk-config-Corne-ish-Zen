@@ -115,7 +115,16 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <500>;
             quick_tap_ms = <200>;
-            bindings = <&mo>, <&mkp>; 
+            bindings = <&mo>, <&mp_int_>; 
+        };
+        mp_int_: custom_layer_tap_mp_int {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_MP_int";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            quick_tap_ms = <200>;
+            bindings = <&mkp LCLK>, <&mo NUMROW>; 
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
