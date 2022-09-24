@@ -115,7 +115,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <0>;
             quick_tap_ms = <200>;
-            bindings = <&mkp>, <&mo>; 
+            bindings = <&mkp LCLK>, <&mo NUMROW>; 
         };
         lt_mp_: custom_layer_tap_mp {
             compatible = "zmk,behavior-hold-tap";
@@ -124,7 +124,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <500>;
             quick_tap_ms = <200>;
-            bindings = <&mo>, <&mp_int_ LCLK NUMROW>; 
+            bindings = <&mo>, <&mp_int_>; 
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
