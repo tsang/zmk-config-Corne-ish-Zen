@@ -113,8 +113,8 @@
             label = "LAYER_TAP_MP_int";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick_tap_ms = <200>;
+            tapping-term-ms = <100>;
+            quick_tap_ms = <100>;
             bindings = <&mo>, <&mkp>; 
         };
         lt_mp_: custom_layer_tap_mp {
@@ -130,7 +130,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&mp_int_ NUMROW LCLK>, <&lt_mp_ NUMROW LCLK>;
         };
         gresc: grave_escape {
