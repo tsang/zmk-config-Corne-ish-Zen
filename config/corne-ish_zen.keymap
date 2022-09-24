@@ -71,6 +71,18 @@
             bindings = <&kp LG(F)>;
         };
     };
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
     behaviors {
         mt_: custom_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -131,7 +143,7 @@
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&mp_int_ NUMROW LCLK>, <&lt_mp_ NUMROW LCLK>;
+            bindings = <&lt_mp_ NUMROW LCLK>, <&lt_mp_ &zed_em_kay LCLK>;
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
