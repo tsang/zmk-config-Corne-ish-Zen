@@ -108,15 +108,6 @@
             quick_tap_ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-        lt_mp_: custom_layer_tap_mp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_MP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <500>;
-            quick_tap_ms = <200>;
-            bindings = <&mo>, <&mp_int_ LCLK NUMROW>; 
-        };
         mp_int_: custom_layer_tap_mp_int {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MP_int";
@@ -125,6 +116,15 @@
             tapping-term-ms = <0>;
             quick_tap_ms = <200>;
             bindings = <&mkp>, <&mo>; 
+        };
+        lt_mp_: custom_layer_tap_mp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_MP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <500>;
+            quick_tap_ms = <200>;
+            bindings = <&mo>, <&mp_int_ LCLK NUMROW>; 
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
