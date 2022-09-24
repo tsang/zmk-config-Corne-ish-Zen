@@ -124,8 +124,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MP_int";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <500>;
             quick_tap_ms = <100>;
             bindings = <&mo>, <&mkp>; 
         };
@@ -134,16 +134,16 @@
             label = "LAYER_TAP_MP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick_tap_ms = <200>;
+            tapping-term-ms = <100>;
+            quick_tap_ms = <100>;
             bindings = <&mo>, <&mkp>; 
         };
         td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&lt_mp_ NUMROW LCLK>, <&mkp LCLK>;
+            tapping-term-ms = <200>;
+            bindings = <&lt_mp_ NUMROW LCLK>, <&mp_int_ NUMROW LCLK>;
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
