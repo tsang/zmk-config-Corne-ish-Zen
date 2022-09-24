@@ -124,7 +124,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <500>;
             quick_tap_ms = <200>;
-            bindings = <&mo>, <&mp_int_>; 
+            bindings = <&mo>, <&mkp>; 
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
