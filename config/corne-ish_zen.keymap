@@ -123,7 +123,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick_tap_ms = <125>;
+            quick_tap_ms = <200>;
             bindings = <&mo>, <&mkp>; 
         };
         gresc: grave_escape {
