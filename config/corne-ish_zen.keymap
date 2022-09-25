@@ -86,8 +86,8 @@
             label = "MOD_TAP_MP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            quick_tap_ms = <500>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <100>;
             bindings = <&kp>, <&mkp>;
         };
         mtgui_: custom_mod_tap_gui {
@@ -185,7 +185,7 @@
                         bindings = <
    &kp GRAVE   &kp N1 &kp N2 &kp N3    &ht LG(LS(N4)) N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp MINUS
    &kp ENTER &none  &kp LSHFT  &kp LALT &mkp LCLK &mkp RCLK    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
-   &kp LSHFT &kp LCTL &none  &kp BSLH  &kp LBKT  &kp LS(LG(V))     &none    &none    &none  &kp LBKT  &kp RBKT    &trans
+   &kp LSHFT &mt_mp_ LCTL MB4 &none  &kp BSLH  &kp LBKT  &kp LS(LG(V))     &none    &none    &none  &kp LBKT  &kp RBKT    &trans
                           &mo CONFIG &tog NUMPAD &mo NUMPAD    &kp SPC &mo ADJUST &mo CONFIG
                         >;
                 };
