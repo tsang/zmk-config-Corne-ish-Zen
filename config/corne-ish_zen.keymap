@@ -85,9 +85,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_MP";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick_tap_ms = <100>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            quick_tap_ms = <125>;
             bindings = <&kp>, <&mkp>;
         };
         mtgui_: custom_mod_tap_gui {
@@ -123,7 +123,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick_tap_ms = <50>;
+            quick_tap_ms = <125>;
             bindings = <&mo>, <&mkp>; 
         };
         gresc: grave_escape {
