@@ -122,7 +122,7 @@
             label = "LAYER_TAP_MP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
             quick_tap_ms = <200>;
             bindings = <&mo>, <&mkp>; 
         };
