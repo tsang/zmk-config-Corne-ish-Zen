@@ -121,9 +121,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <500>;
-            quick_tap_ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick_tap_ms = <150>;
             bindings = <&mo>, <&mkp>; 
         };
         gresc: grave_escape {
@@ -184,7 +184,7 @@
                         label = "NUMROW";
                         bindings = <
    &kp GRAVE   &kp N1 &kp N2 &kp N3    &ht LG(LS(N4)) N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp MINUS
-   &kp ENTER &none  &kp LSHFT  &kp LALT &kp MINUS &kp EQUAL    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
+   &kp ENTER &none  &kp LSHFT  &kp LALT &kp MINUS &mkp LCLK    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
    &kp LSHFT &kp LCTL &none  &kp BSLH  &kp LBKT  &kp LS(LG(V))     &none    &none    &none  &kp LBKT  &kp RBKT    &trans
                           &mo CONFIG &tog NUMPAD &mo NUMPAD    &kp SPC &mo ADJUST &mo CONFIG
                         >;
