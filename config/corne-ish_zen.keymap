@@ -201,7 +201,7 @@
                         label = "NUMROW";
                         bindings = <
    &kp GRAVE   &kp N1 &kp N2 &kp N3    &ht LG(LS(N4)) N4    &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp MINUS
-   &kp ENTER &none  &kp LSHFT  &kp LALT &mkp LCLK &mkp RCLK    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
+   &kp ENTER &none  &kp LSHFT  &kp LALT &kp LCTL(LS(LG((KC_F)))) &mkp LCLK    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &none
    &mt_mp_ LSHFT MB4 &mt_mp_ LCTL MB5 &none  &kp BSLH  &kp LBKT  &kp LS(LG(V))     &none    &none    &none  &kp LBKT  &kp RBKT    &trans
                           &mo CONFIG &tog NUMPAD &mo NUMPAD    &kp SPC &mo ADJUST &mo CONFIG
                         >;
