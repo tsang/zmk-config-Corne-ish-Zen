@@ -70,7 +70,7 @@
         combo_df {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&kp LG(F)>;
+            bindings = <&kp LC(LS(LG(F)))>;
         };
         combo_bn {
             timeout-ms = <50>;
