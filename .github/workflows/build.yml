@@ -39,7 +39,7 @@ jobs:
 
       # --- Left Half ---
       - name: West Build (Corne-ish Zen Left)
-        run: west build -s zmk/app -b corne-ish_zen_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b corneish_zen_v1_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
       - name: Corne-ish Zen DTS File (Left)
         if: always()
@@ -59,7 +59,7 @@ jobs:
 
       # --- Right Half ---
       - name: West Build (Corne-ish Zen Right)
-        run: west build --pristine -s zmk/app -b corne-ish_zen_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b corneish_zen_v1_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
       - name: Corne-ish Zen Right Kconfig file
         run: grep -v "^#\|^$" build/zephyr/.config
