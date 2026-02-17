@@ -47,12 +47,6 @@ jobs:
       - name: Rename zmk.uf2 (Left)
         run: cp build/zephyr/zmk.uf2 corneish_zen_left.uf2
 
-      - name: Archive (Corne-ish Zen Left)
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware-left
-          path: corneish_zen_left.uf2
-
       # --- Right Half ---
       - name: West Build (Corne-ish Zen Right)
         run: west build --pristine -s zmk/app -b corneish_zen_v1_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -63,8 +57,11 @@ jobs:
       - name: Rename zmk.uf2 (Right)
         run: cp build/zephyr/zmk.uf2 corneish_zen_right.uf2
 
-      - name: Archive (Corne-ish Zen Right)
+      # --- Archive both together ---
+      - name: Archive Firmware
         uses: actions/upload-artifact@v4
         with:
-          name: firmware-right
-          path: corneish_zen_right.uf2
+          name: firmware
+          path: |
+            corneish_zen_left.uf2
+            corneish_zen_right.uf2
