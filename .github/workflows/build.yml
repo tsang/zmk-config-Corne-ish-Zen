@@ -1,5 +1,4 @@
 on: [push, pull_request, workflow_dispatch]
-
 name: Build
 
 jobs:
@@ -10,9 +9,10 @@ jobs:
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
       - name: Cache west modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -27,34 +27,48 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
       - name: West Init
         run: west init -l config
+
       - name: West Update
         run: west update
+
       - name: West Zephyr export
         run: west zephyr-export
+
+      # --- Left Half ---
       - name: West Build (Corne-ish Zen Left)
         run: west build -s zmk/app -b corne-ish_zen_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Corne-ish Zen DTS File
-        if: ${{ always() }}
+
+      - name: Corne-ish Zen DTS File (Left)
+        if: always()
         run: cat -n build/zephyr/corne-ish_zen_left.dts.pre.tmp
+
       - name: Corne-ish Zen Left Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
+        run: grep -v "^#\|^$" build/zephyr/.config
+
+      - name: Rename zmk.uf2 (Left)
         run: cp build/zephyr/zmk.uf2 corneish_zen_left.uf2
+
       - name: Archive (Corne-ish Zen Left)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-left
           path: corneish_zen_left.uf2
+
+      # --- Right Half ---
       - name: West Build (Corne-ish Zen Right)
         run: west build --pristine -s zmk/app -b corne-ish_zen_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
       - name: Corne-ish Zen Right Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
+        run: grep -v "^#\|^$" build/zephyr/.config
+
+      - name: Rename zmk.uf2 (Right)
         run: cp build/zephyr/zmk.uf2 corneish_zen_right.uf2
+
       - name: Archive (Corne-ish Zen Right)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-right
           path: corneish_zen_right.uf2
