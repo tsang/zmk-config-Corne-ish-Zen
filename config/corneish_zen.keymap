@@ -154,14 +154,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_ENTER";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp APOS>;
+            bindings = <&kp ENTER>, <&kp LS(APOS)>;
             mods = <(MOD_LSFT)>;
         };
         shtqcolon: quote_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_COLON";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp SEMI>;
+            bindings = <&kp APOS>, <&kp LS(SEMI)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         ht: holdtap {
